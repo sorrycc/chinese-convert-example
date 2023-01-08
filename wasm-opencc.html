@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head></head>
+<body>
+<script src="./node_modules/wasm-opencc/generated/opencc-asm.js"></script>
+<script>
+  const { DictSource, Converter } = OpenCCWasm_
+  OpenCCWasm_.ready().then(() => {
+    // 获取s2t.json字典数据
+    const dictSource = new DictSource('s2t.json');
+    return dictSource.get();
+  }).then((args) => {
+    const converter = new Converter(...args)
+    console.log(converter.convert('繁体'))
+    // 注意当不再需要使用converter时，请调用delete方法以释放内存
+    converter.delete()
+  })
+</script>
+</body>
+</html>

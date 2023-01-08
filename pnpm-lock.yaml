@@ -1,0 +1,13 @@
+lockfileVersion: 5.4
+
+specifiers:
+  wasm-opencc: ^1.0.2
+
+devDependencies:
+  wasm-opencc: 1.0.2
+
+packages:
+
+  /wasm-opencc/1.0.2:
+    resolution: {integrity: sha512-FFBKRuNf8d7fVoABwKbDjLqDomxOYrbmnHsx27hnjNruZsnnUma/ktiJ05FlPUJe0M3yAsRUOY4ZG87z7NL7Uw==}
+    dev: true
